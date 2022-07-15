@@ -1,0 +1,545 @@
+import logo from "./logo.svg";
+import "./App.css";
+
+import { Flex, Spacer, Stack } from "@chakra-ui/react";
+import { Container } from "@chakra-ui/react";
+import { Grid, GridItem } from "@chakra-ui/react";
+import { Textarea } from "@chakra-ui/react";
+import { Avatar, AvatarBadge, AvatarGroup } from "@chakra-ui/react";
+import { Image } from "@chakra-ui/react";
+import { Heading, Box } from "@chakra-ui/react";
+import {
+  Tabs,
+  TabList,
+  TabPanels,
+  Tab,
+  TabPanel,
+  Wrap,
+} from "@chakra-ui/react";
+import { Center, Square, Circle, Button } from "@chakra-ui/react";
+import abc from "./assert/logo/logo.png";
+import cover from "./assert/img/img.png";
+import { extendTheme } from "@chakra-ui/react";
+import {
+  colorMode,
+  toggleColorMode,
+  useColorMode,
+  SimpleGrid,
+  WrapItem,
+} from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
+import games from "./assert/img/1.png";
+import games2 from "./assert/img/2.png";
+import games3 from "./assert/img/3.png";
+import games4 from "./assert/img/4.png";
+import news1 from "./assert/img/7.jpg";
+import video from "./assert/img/meta2.png";
+import log1 from "./assert/logo/fb.png";
+import log2 from "./assert/logo/wh.png";
+import log3 from "./assert/logo/pri.png";
+import log4 from "./assert/logo/li.png";
+
+function App() {
+  const breakpoints = {
+    sm: "320px",
+    md: "768px",
+    lg: "960px",
+    xl: "1200px",
+    "2xl": "1536px",
+  };
+
+  const theme = extendTheme({ breakpoints });
+
+  const { colorMode, toggleColorMode } = useColorMode();
+
+  return (
+    <div className="App">
+      <header>
+        <Button onClick={toggleColorMode}>
+          {colorMode === "light" ? "Dark" : "Light"}
+        </Button>
+      </header>
+      <Box
+        width={{ base: "100%", sm: "50%", md: "25%" }}
+        backgroundImage="url('/images/kyuubi.png')"
+        backgroundPosition="center"
+        backgroundRepeat="no-repeat"
+      />
+
+      <Center>
+        <Grid
+          h="105px"
+          templateRows="repeat(1, 1fr)"
+          templateColumns="repeat(3, 1fr)"
+          gap={0}
+        >
+          <Center>
+            <Image mt="1" mb='12'
+
+              w={"110px"}
+
+
+              src={abc}
+
+            />
+          </Center>
+
+          <Tabs isFitted variant="enclosed" p="10">
+            <TabList mb="1em" gap={2}>
+              <Tab
+                borderRadius="full"
+                bgGradient="linear(to-l, #7928CA, #FF0080)"
+              >
+                HOME
+              </Tab>
+              <Tab
+                borderRadius="full"
+                bgGradient="linear(to-l, #7928CA, #FF0080)"
+              >
+                NEWS
+              </Tab>
+              <Tab
+                borderRadius="full"
+                bgGradient="linear(to-l, #7928CA, #FF0080)"
+              >
+                GAMES
+              </Tab>
+              <Tab
+                borderRadius="full"
+                bgGradient="linear(to-l, #7928CA, #FF0080)"
+              >
+                CONTACTS
+              </Tab>
+            </TabList>
+          </Tabs>
+        </Grid>
+      </Center>
+
+      <Center w="100%" h="100%" color="white">
+        <Image boxSize="m" objectFit="cover" src={cover} alt="Dan Abramov" />
+      </Center>
+
+      <Center h="10%" color="white">
+        <Text
+          mt="10"
+          bgGradient="linear(to-l, #7928CA, #FF0080)"
+          bgClip="text"
+          fontSize={{ base: "25px", md: "30px", lg: "44px" }}
+          fontWeight="extrabold"
+        >
+          UPCOMING GAMES
+        </Text>
+      </Center>
+      <br></br>
+
+      <SimpleGrid
+        columns={{ base: 1, md: 1, lg: 6 }}
+        spacing={10}
+        justifyItems="center"
+      >
+        <Box></Box>
+        <Box
+          width={{ base: "30%", sm: "20%", md: "20%", lg: "100%" }}
+          bgGradient="linear(to-l, #7928CA, #FF0080)"
+          borderRadius="100%"
+          h={{ base: "350px", sm: "300px", md: "400px", lg: "150%" }}
+        >
+          <Center>
+            <Image
+              p="1"
+              w={"200px"}
+              bgGradient="linear(to-l, #1dcbf2, #f2d91d)"
+              borderRadius="full"
+              src={games}
+              alt="Dan Abramov"
+            />
+          </Center>
+
+          <Center h="30%" color="white">
+            <SimpleGrid columns={1} spacing={0}>
+              <Box>
+                <Text
+                  bgGradient="linear(to-l, #1dcbf2, #f2d91d)"
+                  bgClip="text"
+                  fontSize={{ base: "15px", md: "20px", lg: "24px" }}
+                  fontWeight="extrabold"
+                >
+                  FIFAL 2020
+                </Text>
+              </Box>
+
+              <Box>
+                <Button
+                  size={{ base: "sm", md: "md" }}
+                  mt="10%"
+                  borderRadius="full"
+                  bgGradient="linear(to-l, #1dcbf2, #f2d91d)"
+                >
+                  READ MORE
+                </Button>
+              </Box>
+            </SimpleGrid>
+          </Center>
+        </Box>
+
+        <Box
+          width={{ base: "30%", sm: "20%", md: "20%", lg: "100%" }}
+          bgGradient="linear(to-l, #7928CA, #FF0080)"
+          borderRadius="100%"
+          h={{ base: "350px", sm: "300px", md: "400px", lg: "150%" }}
+        >
+          <Center>
+            <Image
+              p="1"
+              w={"200px"}
+              bgGradient="linear(to-l, #1dcbf2, #f2d91d)"
+              borderRadius="full"
+              src={games2}
+              alt="Dan Abramov"
+            />
+          </Center>
+
+          <Center h="30%" color="white">
+            <SimpleGrid columns={1} spacing={0}>
+              <Text
+                bgGradient="linear(to-l, #1dcbf2, #f2d91d)"
+                bgClip="text"
+                fontSize={{ base: "15px", md: "20px", lg: "24px" }}
+                fontWeight="extrabold"
+              >
+                COMBI NATION
+              </Text>
+
+              <Box>
+                <Button
+                  mt="5%"
+                  borderRadius="full"
+                  bgGradient="linear(to-l, #1dcbf2, #f2d91d)"
+                  size={{ base: "sm", md: "md" }}
+                >
+                  READ MORE
+                </Button>
+              </Box>
+            </SimpleGrid>
+          </Center>
+        </Box>
+
+        <Box
+          width={{ base: "30%", sm: "20%", md: "20%", lg: "100%" }}
+          bgGradient="linear(to-l, #7928CA, #FF0080)"
+          borderRadius="100%"
+          h={{ base: "350px", sm: "300px", md: "400px", lg: "150%" }}
+        >
+          <Center>
+            <Image
+              p="1"
+              w={"200px"}
+              bgGradient="linear(to-l, #1dcbf2, #f2d91d)"
+              borderRadius="full"
+              src={games3}
+              alt="Dan Abramov"
+            />
+          </Center>
+
+          <Center h="30%" color="white">
+            <SimpleGrid columns={1} spacing={0}>
+              <Text
+                bgGradient="linear(to-l, #1dcbf2, #f2d91d)"
+                bgClip="text"
+                fontSize={{ base: "15px", md: "20px", lg: "24px" }}
+                fontWeight="extrabold"
+              >
+                FORZA JACSON
+              </Text>
+              <Box>
+                <Button
+                  mt="5%"
+                  borderRadius="full"
+                  bgGradient="linear(to-l, #1dcbf2, #f2d91d)"
+                  size={{ base: "sm", md: "md" }}
+                >
+                  READ MORE
+                </Button>
+              </Box>
+            </SimpleGrid>
+          </Center>
+        </Box>
+
+        <Box
+          width={{ base: "30%", sm: "20%", md: "20%", lg: "100%" }}
+          bgGradient="linear(to-l, #7928CA, #FF0080)"
+          borderRadius="100%"
+          h={{ base: "350px", sm: "300px", md: "400px", lg: "150%" }}
+        >
+          <Center>
+            <Image
+              p="1"
+              w={"200px"}
+              bgGradient="linear(to-l, #1dcbf2, #f2d91d)"
+              borderRadius="full"
+              src={games4}
+              alt="Dan Abramov"
+            />
+          </Center>
+
+          <Center h="30%" color="white">
+            <SimpleGrid columns={1} spacing={0}>
+              <Text
+                bgGradient="linear(to-l, #1dcbf2, #f2d91d)"
+                bgClip="text"
+                fontSize={{ base: "15px", md: "20px", lg: "24px" }}
+                fontWeight="extrabold"
+              >
+                MAN SKY
+              </Text>
+              <Box>
+                <Button
+                  mt="5%"
+                  borderRadius="full"
+                  bgGradient="linear(to-l, #1dcbf2, #f2d91d)"
+                  size={{ base: "sm", md: "md" }}
+                >
+                  READ MORE
+                </Button>
+              </Box>
+            </SimpleGrid>
+          </Center>
+        </Box>
+
+        <Box></Box>
+      </SimpleGrid>
+
+
+      <Center color="white" bgGradient="linear(to-l, #7928CA, #080808)">
+        <Text
+          mt="12%"
+          mb="3%"
+          bgGradient="linear(to-l, #1dcbf2, #f2d91d)"
+          bgClip="text"
+          fontSize={{ base: "25px", md: "30px", lg: "44px" }}
+          fontWeight="extrabold"
+        >
+          LATEST NEWS
+        </Text>
+      </Center>
+
+
+
+      <Grid
+        templateAreas={`"header header"
+                  "nav main"
+                  "nav footer"`}
+        gridTemplateRows={"0px 1fr 0px"}
+        gridTemplateColumns={"30%"}
+        h="300px"
+        gap="0"
+        color="blackAlpha.700"
+        fontWeight="bold"
+      >
+        <Box
+          w="100%"
+
+          bgGradient="linear(to-l,#080808, #7928CA )"
+          width={{ base: "100%", sm: "50%", md: "100%" }}
+          h={{ base: "100%", sm: "100%", md: "100%", lg: "94%" }}
+        />
+
+        <GridItem pl="1" area={"nav"} columns={{ base: "1", sm: "", md: '2', lg: '2' }}>
+           <SimpleGrid columns={{ base: "0", sm: "", md: '100%', lg: '100%' }} >
+            <Box
+              boxSize={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
+              mt="1%"
+              mb="1%"
+              mr="1%"
+              bgGradient="linear(to-l, #1dcbf2, #f2d91d)"
+              h={{ base: "79.5%%", sm: "79.5%", md: "79.5%", lg: "79.5%" }}
+            >
+              <Image
+                src={video}
+                alt="Dan Abramov"
+                p="1"
+                borderRadius="1%"
+                boxSize={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
+                h={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
+              />
+              
+              
+            </Box>
+          </SimpleGrid> 
+        </GridItem>
+
+         <Box w="100%"  bgGradient="linear(to-l, #7928CA, #080808)" 
+         h={{ base: "100%", sm: "100%", md: "100%",lg: "810px", xl:"911px" }}
+         
+         /> 
+        <GridItem pl="1" area={"main"} h="100%" >
+          <SimpleGrid columns={{ base: "1", sm: "1", md: '2', lg: '2' }} >
+            <Box boxSize="0%" 
+              h={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
+              w={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}>
+              <Image
+                src={news1}
+                alt="Dan Abramov"
+                
+                borderRadius="1%"
+                h={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
+                w={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
+
+
+              />
+            </Box>
+
+            <Box
+              //  boxSize={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
+              h={{ base: "105.4%", sm: "99.4%", md: "99.4%", lg: "99.4%" }}
+              w={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
+
+              mb="1%"
+              
+              bgGradient="linear(to-l, #242323, #1f1c1c)"
+            >
+              <Text
+                mt="8%"
+                mb="5%"
+                ml="2%"
+                mr="2%"
+                bgGradient="linear(to-l, #7928CA, #FF0080)"
+                bgClip="text"
+                fontSize={{ base: "25px", md: "30px", lg: "44px" }}
+                fontWeight="extrabold"
+              >
+                The best online Game is out now!
+              </Text>
+
+              <Text
+                mb="2%"
+                ml="2%"
+                mr="2%"
+                fontSize={{ base: "20px", sm: "25px", md: "20px", lg: "25px" }}
+                bgGradient="linear(to-l, #7928CA, #42f5f2)"
+                bgClip="text"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eius-mod tempor incididunt ut labore et dolore magna aliqua.
+                Quis ipsum suspendisse ultrices gravida.
+              </Text>
+              <Button mt='5'
+                borderRadius="full"
+                bgGradient="linear(to-l, #1dcbf2, #f2d91d)"
+              >
+                {" "}
+                More{" "}
+              </Button>
+            </Box>
+          </SimpleGrid>
+
+          <Box boxSize="10%" w="100%"
+          h={{ base: "1%", sm: "1%", md: "1%", lg: "1%" }}
+          >
+            <Text mt='10'
+              bgGradient="linear(to-l, #7928CA, #FF0080)"
+              bgClip="text"
+              fontSize={{ base: "25px", md: "30px", lg: "44px" }}
+              fontWeight="extrabold"
+            >
+              METAVERSE
+            </Text>
+
+            <Text
+              mt="5%"
+              mb="5%"
+              ml="2%"
+              mr="2%"
+              bgGradient="linear(to-l,#42f5f2, #7928CA)"
+              bgClip="text"
+              fontSize={{ base: "15px", md: "20px", lg: "24px" }}
+            >
+              Metaverse is the Internet part of a shared virtual reality that is
+              made as close as possible to the real world in the second stage of
+              the Internet world
+            </Text>
+
+            <Button
+              borderRadius="full"
+              bgGradient="linear(to-l, #7928CA, #FF0080)"
+            >
+              JOIN WITH US !
+            </Button>
+          </Box>
+        </GridItem>
+      </Grid>
+
+
+      {/* <Box
+        w="100%"
+        h="610px"
+        bgGradient="linear(to-l,#FF0080,#7928CA,#080808,)"
+        mt="6%"
+        mb="10"
+      /> */}
+
+      <Center>
+        <Wrap
+          mt={{ base: "180%", sm: "135%", md: "57%", lg: "42%" }}
+          mb={{ base: "5%", sm: "10%", md: "5%", lg: "1%" }}>
+          <WrapItem>
+            <Avatar name="Dan Abrahmov" src="https://bit.ly/dan-abramov" />
+          </WrapItem>
+          <WrapItem>
+            <Avatar
+              name="Kola Tioluwani"
+              src="https://bit.ly/tioluwani-kolawole"
+            />
+          </WrapItem>
+          <WrapItem>
+            <Avatar name="Kent Dodds" src="https://bit.ly/kent-c-dodds" />
+          </WrapItem>
+          <WrapItem>
+            <Avatar name="Ryan Florence" src="https://bit.ly/ryan-florence" />
+          </WrapItem>
+          <WrapItem>
+            <Avatar name="Prosper Otemuyiwa" src="https://bit.ly/prosper-baba" />
+          </WrapItem>
+          <WrapItem>
+            <Avatar name="Christian Nwamba" src="https://bit.ly/code-beast" />
+          </WrapItem>
+          <WrapItem>
+            <Avatar name="Segun Adebayo" src="https://bit.ly/sage-adebayo" />
+          </WrapItem>
+        </Wrap>
+
+      </Center>
+
+      <Center>
+        <Wrap mb={{ base: "5%", sm: "10%", md: "5%", lg: "5%" }}>
+          <WrapItem>
+            <Avatar name="Dan Abrahmov" src={log1} />
+          </WrapItem>
+          <WrapItem>
+            <Avatar name="Kola Tioluwani" src={log2} />
+          </WrapItem>
+          <WrapItem>
+            <Avatar name="Kent Dodds" src={log3} />
+          </WrapItem>
+          <WrapItem>
+            <Avatar name="Ryan Florence" src={log4} />
+          </WrapItem>
+        </Wrap>
+      </Center>
+
+
+      <Center
+        bgGradient="linear(to-l,#FF0080,#7928CA,#080808,)"
+        h="1%"
+        color="white"
+        fontSize={{ base: "8px", md: "10px", lg: "14px" }}
+      >
+        Malith 2022 @ All rights reserved
+      </Center>
+
+
+    </div>
+  );
+}
+
+export default App;
